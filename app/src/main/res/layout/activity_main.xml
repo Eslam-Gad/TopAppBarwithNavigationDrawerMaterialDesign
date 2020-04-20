@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerlayout"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <!-- navigation view should be in the bottom-->
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="172dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:contentScrim="?attr/colorPrimary"
+            app:statusBarScrim="?attr/colorPrimaryVariant"
+            app:expandedTitleMarginStart="72dp"
+            app:expandedTitleMarginBottom="28dp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/media"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true" />
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:background="@android:color/transparent"
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            app:liftOnScroll="true"
+            app:layout_collapseMode="pin"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Page Home"
+            android:elevation="0dp"
+            app:menu="@menu/top_app_bar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary">
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:helperText="1. IntroductionAround the world, there will be one new case of dementia every 3 seconds; 50 million people worldwide are living with dementia in 2018. This number will more than triple to 152 million by 2050 [1] . Nearly 60% of people with dementia currently live in low- and middle-income countries and most new cases (71%) are expected to occur in those countries [1] [2] [3] [4] .Using the estimated aging indices for the years 2030 and 2050, Morocco with an aging index ranging from 41.7 percent to 72.8 percent in 2030, is considered rapidly aging. Despite the presence of aging policies in Morocco, almost half of the policies appear to still be in the planning or initiated phases [5] .The Office of the High Commissioner for the Plan of Morocco estimates that the population of older people increased more than three and a half times between 1960 and 2014, from 836,000 to 3,200,000 [6] . Its rate in the total population passed from 4.8% in 1980 to 12.7% in 2018. This rate is predicted to rise more rapidly to 26.5% in 2050 [7] [8] [9] .The elderly Moroccan population is mostly illiterate (70%), only 2.5% have been high level of education. Illiteracy of the elderly is more pronounced in rural areas (85.9%) than urban areas (58.2%). The gap between male and female illiteracy among the adult population is greater (male illiteracy rate 53.5 percent, female 85.0 percent) [6] .Cognitive decline and dementia have a high individual impact and are strongly age-associated. Variations in the prevalence of dementia within different ethnic groups have been reported worldwide, and a number of reviews have provided a picture of epidemiological studies in dementia research [3] [10] . However, little is known about the prevalence of dementia within the Moroccan population. In the World Alzheimer Report 2015 [3] , the highest standardized prevalence was those in North Africa/Middle East-Egypt (8.7%), (applied to Egypt, Iraq, Morocco, Yemen, Algeria and Turkey).There is one published study which investigated the demographic profile and etiologies of dementia in the Memory Center of Rabat (Morocco) [11] . The study shows a large diversity of etiologies in dementia. The mechanism was degenerative in 328 cases (58.5%) including 287 Alzheimer’s Disease (AD), vascular in 95 cases (16.9%), mixed in 42 cases, infectious in 33 cases and inflammatory in 18. Other etiologies were found in 35 cases, and dementia was of undetermined cause in 10 cases. In the study by Sweeney and colleagues study, vascular dysfunction is described as the disregarded partner of Alzheimer’s disease, an important early event in AD pathophysiology [12] .According to the latest WHO data published in 2017 [13] , Alzheimer/Dementia, listed as the underlying cause of death, accounts for nearly 9847 deaths in Morocco. That’s about 1 of every 18 deaths.There is as yet no innovative treatment for the condition, and so prompt detection and diagnosis of dementia is very important [14] [15] . Regular physical activity and management of cardiovascular risk factors (diabetes, obesity, smoking, and hypertension) reduce the risk of cognitive decline and may reduce the risk of dementia. There is sufficiently strong evidence to conclude that a healthy diet and lifelong learning/cognitive training may also reduce the risk of cognitive decline [16] [17] [18] .Cognitive tests covering multiple domains are an essential component of a definitive dementia diagnostic assessment for the purposes of establishing the criterion of decline in at least two domains of cognitive function, including memory [19] .The performance in neuropsychological tests is influenced by educational and cultural factors [20] ; illiterate people have difficulty in responding to tests that require reading and writing skills or copying complex figures, even though they may have a normal level of cognitive function [14] .The current tests for screening and diagnosing dementia in Morocco are an adaptation of the Western version that does not take into consideration the presence of illiteracy in the Moroccan population. Accordingly, any subject with little or no education but without dementia is likely to have difficulties in properly responding to some of the questions on these tests. Therefore, accurate identification and diagnosis of dementia among illiterate elderly subjects are problematic when using these tests [14] .This study was conducted to translate to Moroccan Arabic language, and to harmonize and test the cognitive test battery used in the 10/66 studies comprising tests of general cognitive function, verbal fluency and immediate verbal recall [21] . It also aimed to present the normative preliminary information, explore the effects of age, education/illiteracy, and gender on the performance of these three tests on illiterate and semi-illiterate Moroccan subjects.">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- your content -->
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|left"
+        app:menu="@menu/navigation_drawer_menue"
+        app:headerLayout="@layout/navigation_drawer_header"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
